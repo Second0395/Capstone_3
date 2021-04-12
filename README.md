@@ -2,7 +2,7 @@
 
 # Olympics
 
-I think the olympics as an event is so interesting in itself. It's pretty much the biggest event in the world, so there is bound to be some interesting things regarding its logistics. 
+I think the olympics as an event is so interesting in itself. It's the biggest event in the world and there's a lot that happens. I want to check news coverage for news organizations in America and compare how they deliver news about other countries compared to America. I'm anticipating there will be more "patriotic" content in the American coverage. I will have to remove a lot of stop words to avoid data leakage
 
 https://olympicsapi.docs.apiary.io/#reference/olympics/athlete/retrieve-olympic-games
 
