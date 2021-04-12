@@ -6,10 +6,12 @@ I think the olympics as an event is so interesting in itself. It's pretty much t
 
 https://olympicsapi.docs.apiary.io/#reference/olympics/athlete/retrieve-olympic-games
 
-# Light pollution
+# Predicting real estate value
 
-Light pollution is an interesting phenomenon. It blocks visibility for people in highly populated areas, if there is enough light to do so. GADM has a good database where I can pull data from specific countries, so I could analyze the content of America or some of the countries in North America. I will most likely have to use Geopandas
-https://gadm.org/formats.html
+I want to grab images of houses off of a real estate website with their respective listing prices. Then, I will try to predict the value of the house based on the image. This would be a CNN/Neural network problem and I would have to spend a while training the data on AWS. This would be an interesting problem since there is likely a connection between appearance and value, but to see a model pick up those differences would be cool.
+
+
+https://www.realtor.com/realestateandhomes-search/Piscataway_NJ
 
 # Classifying star ratings
 
