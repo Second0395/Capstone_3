@@ -8,6 +8,16 @@ That is what this project focuses on. Using both a classification and a regressi
 
 # Data
 
-The movies and TV reviews dataset
+The movies and TV reviews dataset has around 1.7 million reviews from Amazon, whose character length is above 100. For the purposes of this project, I chose to only consider reviews in the 500-3000 character range to get reviews with a significant body but a reasonable size.
 
+As an enjoyer of movies, I thought this dataset would be really useful for the project. Movies and TV are something that a lot of people feel strongly about, so there would be a lot of emotions present in their reviews. So, the models would be able to use NLP to pick up on them
 
+# Modeling
+
+For the purposes of modeling, I created a balanced dataset, composed of 40,000 reviews from each star rating class, so 200,000 for the whole dataset. This balanced dataset would allow me to use 
+
+This project aims to use both classification and regression to pull insights about the original dataset, first let's start with classification.
+
+## Classification
+
+Trying out a Random Forest, Logistic Classifier, Multinomial Naive Bayes' model and a KNN Classifier, the Logistic Classifier performed the best with an accuracy of 53%. This actually performs well
