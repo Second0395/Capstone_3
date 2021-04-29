@@ -38,4 +38,28 @@ For the logistic model, I also pulled out the feature importances for each class
 
 picture
 
-Notice the absense of any words that relate directly to the topic of Movies and TV. These coefficients pulled from the Logistic Classifier give us a very intuitive and generic list of words pertaining to all of the star classes. However
+Notice the absense of any words that relate directly to the topic of Movies and TV. These coefficients pulled from the Logistic Classifier give us a very intuitive and generic list of words pertaining to all of the star classes. However, do we want more information pertaining to the original dataset? Luckily, the Linear Regression addresses some of that.
+
+## Regression
+
+Instead of a model predicting into 5 classes, how about we let the model predict any real number? So, the model would be allowed to predict a 3.75 for example. There are many regression models we can use to accomplish this--I tried Gradient Boosting, Linear Regression, and a Random Forest, but the Linear Regression performed the best out of all of them, with an RMSE of .92.
+
+This means the model was predicting ~1 off from the actual value on average. This isn't very impressive, but luckily the model itself gives us some good information about the dataset.
+
+### Coefficient Matrix
+
+As we did with the Logistic Classifier, we can take the coefficients of the Linear Regression. For this, I sorted by the most positive and negative coefficients, and found the words that corresponded to those. These are the results:
+
+
+
+For the positive coefficients, we can see that the first word is "damme". Strange, that doesn't seem like a word about movies, does it? This turns out to refer to Jean-Claude Van Damme, an accomplished film producer. When I looked further into this, it looks like van Damme was a highly controversial figure.
+
+Looking at the negative coefficients, we can see "van damme", the bigram, appears as well. This is very specific information compared to what we got out of the Logistic Regression, so specific that it actually includes someone's name. We also get some information like "Nightmare on Elm", referring of course to the movie. But "timeless" and "propaganda" appear, which aren't hyperspecific but are still specific to this movies and TV dataset. And these words are powerful, timeless is a positive word that expresses that a form of art has value not tied to its time period, and propaganda is a potent term used to describe harmful and insidious media. These are great terms to be able to pull out from our data, and give a great look into some of the nuanced words used to describe movies and TV. However, we lose that level of generality that we got with the Logistic Regression. So, which one of these is better?
+
+There isn't an easy way to answer that, because as shown, these models give very different information. The Logistic Regression categorizes the 5 star ratings well with some generic words that describe each one. The Linear Regression gives a more specific and interesting list of words, with the defecit of potentially too specific of information. But that being said, using both of these models together allowed me to get a greater understanding of the data, more than I would have if I used just one of them. 
+
+# Results
+
+The question I went into this project with was whether or not 2,3, and 4 star ratings could be differentiated from each other, and that was proven to be true. However, something that I learned in the process was how classification models and regresssion models could work together to give insights that normally wouldn't be obtainable by just one or the other.
+
+Something I would be interested in pursuing in the future is applying these same models to other datasets of different topics and seeing if the same thing happens as did happen with the Movies and TV reviews dataset. That is, when I use the Logisitic Classifier will I get a generic description of what each star ratings mean without any reference to the original dataset? And when I use a Linear Regression on the dataset
