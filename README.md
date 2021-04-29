@@ -32,11 +32,11 @@ And at the lowest value, we have the 3 star class represented by the green curve
 
 All in all, this ROC curve does a great job at giving an intuitive understanding of how the model is performing on this dataset with regard to the classes, and it reflects our real world understanding of the classses as well.
 
-FEATURE IMPORTANCES
+### FEATURE IMPORTANCES
 
 For the logistic model, I also pulled out the feature importances for each class. These gave some very intuitive results:
 
-picture
+![](images/Untitled.png)
 
 Notice the absense of any words that relate directly to the topic of Movies and TV. These coefficients pulled from the Logistic Classifier give us a very intuitive and generic list of words pertaining to all of the star classes. However, do we want more information pertaining to the original dataset? Luckily, the Linear Regression addresses some of that.
 
@@ -50,7 +50,7 @@ This means the model was predicting ~1 off from the actual value on average. Thi
 
 As we did with the Logistic Classifier, we can take the coefficients of the Linear Regression. For this, I sorted by the most positive and negative coefficients, and found the words that corresponded to those. These are the results:
 
-
+![](images/text.png)
 
 For the positive coefficients, we can see that the first word is "damme". Strange, that doesn't seem like a word about movies, does it? This turns out to refer to Jean-Claude Van Damme, an accomplished film producer. When I looked further into this, it looks like van Damme was a highly controversial figure.
 
