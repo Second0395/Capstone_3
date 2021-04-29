@@ -1,4 +1,4 @@
-# title
+# Exploring Star Ratings - Regression vs. Classification
 
 We all know that there are differences between 1 star ratings and 5 star ratings. No matter what website you go on, there is a general understanding that 5 star means the product or service met or even exceeded your expectations, and a 1 star rating means that it did not. 
 
@@ -22,7 +22,7 @@ This project aims to use both classification and regression to pull insights abo
 
 Trying out a Random Forest, Logistic Classifier, Multinomial Naive Bayes' model and a KNN Classifier, the Logistic Classifier performed the best with an accuracy of 53%. This actually performs well, considering that random guessing in a 5-class model would give 20% accuracy.
 
-ROC CURVE
+![](images/ROC.png)
 
 This ROC curve does a good job of showing how each category performs in the model. They are evaluated by AUC (Area under curve), so the ones that perform the best are the ones with the most area under the curve. If we go from best-performing to worst-performing, then the best class is 5 stars (purple) followed closely by 1 star (blue). These two are grouped together, which is intuitive. 1 and 5 star ratings are the most polarized, representing when somoene is either very pleased or very displeased with a product. So the model is able to detect these the easiest out of all the classes. There is also the fact that they are the boundary classes, and in a sense will "absorb" all the sentiment that extends past them as well, like if someone was very, VERY displeased with a product, it would still appear in the 1 star class.
 
