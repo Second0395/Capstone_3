@@ -20,4 +20,22 @@ This project aims to use both classification and regression to pull insights abo
 
 ## Classification
 
-Trying out a Random Forest, Logistic Classifier, Multinomial Naive Bayes' model and a KNN Classifier, the Logistic Classifier performed the best with an accuracy of 53%. This actually performs well
+Trying out a Random Forest, Logistic Classifier, Multinomial Naive Bayes' model and a KNN Classifier, the Logistic Classifier performed the best with an accuracy of 53%. This actually performs well, considering that random guessing in a 5-class model would give 20% accuracy.
+
+ROC CURVE
+
+This ROC curve does a good job of showing how each category performs in the model. They are evaluated by AUC (Area under curve), so the ones that perform the best are the ones with the most area under the curve. If we go from best-performing to worst-performing, then the best class is 5 stars (purple) followed closely by 1 star (blue). These two are grouped together, which is intuitive. 1 and 5 star ratings are the most polarized, representing when somoene is either very pleased or very displeased with a product. So the model is able to detect these the easiest out of all the classes. There is also the fact that they are the boundary classes, and in a sense will "absorb" all the sentiment that extends past them as well, like if someone was very, VERY displeased with a product, it would still appear in the 1 star class.
+
+If we look a little further down, we can see that 2 stars and 4 stars are also grouped together. Again, this makes sense--these classes are somewhat less defined than the 1 and 5 star classes, but they still have some signal in them that indicates whether they're positive or negative. There is a general understanding that 4 and 2 star rating are less potent versions of 5 and 1 star ratings, so again, this is intuitive.
+
+And at the lowest value, we have the 3 star class represented by the green curve. The 3 star rating posesses qualities of both the 2 and 4 star rating, which are already loosely defined for a lot of people. But this line still performs significantly better than the mean regressor, notated in the dotted black line, so the model does successfully pick up on words that are unique to this class. 
+
+All in all, this ROC curve does a great job at giving an intuitive understanding of how the model is performing on this dataset with regard to the classes, and it reflects our real world understanding of the classses as well.
+
+FEATURE IMPORTANCES
+
+For the logistic model, I also pulled out the feature importances for each class. These gave some very intuitive results:
+
+picture
+
+Notice the absense of any words that relate directly to the topic of Movies and TV. These coefficients pulled from the Logistic Classifier give us a very intuitive and generic list of words pertaining to all of the star classes. However
