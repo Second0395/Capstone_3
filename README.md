@@ -38,7 +38,6 @@ For the logistic model, I also pulled out the feature importances for each class
 
 picture
 
-<<<<<<< HEAD
 Notice the absense of any words that relate directly to the topic of Movies and TV. These coefficients pulled from the Logistic Classifier give us a very intuitive and generic list of words pertaining to all of the star classes. However, do we want more information pertaining to the original dataset? Luckily, the Linear Regression addresses some of that.
 
 ## Regression
@@ -63,7 +62,6 @@ There isn't an easy way to answer that, because as shown, these models give very
 
 The question I went into this project with was whether or not 2,3, and 4 star ratings could be differentiated from each other, and that was proven to be true. However, something that I learned in the process was how classification models and regresssion models could work together to give insights that normally wouldn't be obtainable by just one or the other.
 
-Something I would be interested in pursuing in the future is applying these same models to other datasets of different topics and seeing if the same thing happens as did happen with the Movies and TV reviews dataset. That is, when I use the Logisitic Classifier will I get a generic description of what each star ratings mean without any reference to the original dataset? And when I use a Linear Regression on the dataset
-=======
-Notice the absense of any words that relate directly to the topic of Movies and TV. These coefficients pulled from the Logistic Classifier give us a very intuitive and generic list of words pertaining to all of the star classes. However
->>>>>>> e60763d25f1877c69ba2500d9c86e973fec4b0b2
+Something I would be interested in pursuing in the future is applying these same models to other datasets of different topics and seeing if the same thing happens as did happen with the Movies and TV reviews dataset. That is, when I use the Logisitic Classifier will I get a generic description of what each star ratings mean without any reference to the original dataset? And when I use a Linear Regression on the dataset, will it give me more words specific to the dataset? I believe that using both regression and classification in tandem will yield more interesting results for any dataset that I apply it to.
+
+Another interesting experiment would be trying this on a dataset with more rating options, like a dataset that has all the half-ratings (1.5 stars, 4.5 stars, etc.). Is there more nuance to find in the difference between 4 and 4.5 stars? This would be an interesting direction that will likely yield very interesting results.
